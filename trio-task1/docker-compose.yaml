@@ -13,9 +13,13 @@ services:
       target: /etc/nginx/nginx.conf
   flask-app:
     container_name: flask-app
-    image: duo-task-flask:latest
+    image: trio-task-flask:latest
     build: ./flask-app
   mysql:
     container_name: mysql
-    image: mysql:latest
+    image: trio-task-db:latest
     build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: flask-db
+    
