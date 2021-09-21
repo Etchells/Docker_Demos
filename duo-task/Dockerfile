@@ -5,7 +5,7 @@ COPY . .
 # Install pip dependencies from requirements
 RUN pip install -r requirements.txt
 # Set YOUR_NAME environment variable
-ENV YOUR_NAME=Glenn
+# ENV YOUR_NAME=Glenn #taken out for Docker-Compose task
 # Expose the correct port
 EXPOSE 5500
 # Create an entrypoint
