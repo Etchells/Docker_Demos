@@ -15,11 +15,12 @@ services:
     container_name: flask-app
     image: trio-task-flask:latest
     build: ./flask-app
-  mysql:
-    container_name: mysql
-    image: trio-task-db:latest
-    build: ./db
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: flask-db
-    
+  # mysql:
+  #   container_name: mysql
+  #   image: trio-task-db:latest
+  #   build: ./db
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+  #     MYSQL_DATABASE: flask-db
